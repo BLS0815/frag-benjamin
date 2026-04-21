@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200" fill="none">
+  <g stroke="#C9A84C" stroke-width="6" stroke-linecap="square" fill="none">
+    
+    <path d="M10 10 L10 190 L250 190 L250 10 L10 10"></path>
+    
+    <path d="M30 30 L30 170 L70 170 L70 50 L50 50 L50 130 L90 130 L90 90 L110 90"></path>
+    <path d="M30 150 L10 150"></path>
+    <path d="M50 110 L30 110"></path>
+    <path d="M90 50 L90 70"></path>
+    
+    <path d="M230 30 L230 170 L190 170 L190 50 L210 50 L210 130 L170 130 L170 90 L150 90"></path>
+    <path d="M230 150 L250 150"></path>
+    <path d="M210 110 L230 110"></path>
+    <path d="M170 50 L170 70"></path>
+    
+    <path d="M130 170 L130 190"></path>
+    <path d="M110 150 L150 150"></path>
+  </g>
+  
+  <g transform="translate(85 30)">
+    <path d="M45 0 L85 8 L85 55 C85 85 68 110 45 120 C22 110 5 85 5 55 L5 8 Z" fill="#C9A84C"></path>
+    <g fill="#1A2744">
+      <path d="M44 22 L46 22 L46 70 L44 70 Z"></path>
+      <path d="M45 15 L48 23 L42 23 Z"></path>
+      <rect x="32" y="70" width="26" height="5" rx="1"></rect>
+      <rect x="43.5" y="75" width="3" height="15"></rect>
+      <circle cx="45" cy="94" r="3.5"></circle>
+    </g>
+  </g>
+</svg>

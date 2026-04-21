@@ -1,0 +1,261 @@
+/* ============================================
+   Schild statt Schwert — Design System
+   Colors, typography, spacing, motion tokens.
+   ============================================ */
+
+/* ---- FONTS ----
+   Served via Google Fonts.
+   If self-hosting is needed, download from:
+   - https://fonts.google.com/specimen/Bebas+Neue
+   - https://fonts.google.com/specimen/Source+Sans+3
+   (We use Source Sans 3, the updated Source Sans Pro.)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* ===== BRAND COLORS ===== */
+  --marine-900:  #0D1426;  /* darker marine for depth */
+  --marine-800:  #141E35;  /* hover/pressed on marine */
+  --marine-700:  #1A2744;  /* PRIMARY marine — the brand blue */
+  --marine-600:  #243354;  /* raised surface on dark */
+  --marine-500:  #334165;  /* subtle borders on dark */
+
+  --gold-700:    #A88A3A;  /* pressed/focused accent */
+  --gold-600:    #B89842;  /* hover state */
+  --gold-500:    #C9A84C;  /* ACCENT gold — headlines, highlights */
+  --gold-400:    #D7BC72;  /* light gold */
+  --gold-300:    #E5D199;  /* subtle gold bg */
+
+  --cream-50:    #FAF6EE;  /* lighter cream for elevated cards */
+  --cream-100:   #F5F0E8;  /* BACKGROUND cream — the brand canvas */
+  --cream-200:   #EDE5D6;  /* hover on cream, subtle dividers */
+  --cream-300:   #DFD3BE;  /* rule lines, borders */
+
+  --ink-900:     #1A1A1A;
+  --ink-800:     #2C2C2C;  /* BODY TEXT */
+  --ink-600:     #5A5A5A;  /* muted body */
+  --ink-500:     #7A7573;  /* caption / helper */
+  --ink-400:     #A29D99;  /* disabled / placeholder */
+
+  /* ===== SEMANTIC ===== */
+  --bg:          var(--cream-100);
+  --bg-elevated: var(--cream-50);
+  --bg-subtle:   var(--cream-200);
+  --surface-dark: var(--marine-700);
+  --surface-dark-elevated: var(--marine-600);
+
+  --fg:          var(--ink-800);
+  --fg-muted:    var(--ink-600);
+  --fg-subtle:   var(--ink-500);
+  --fg-on-dark:  var(--cream-100);
+  --fg-on-dark-muted: rgba(245,240,232,0.72);
+
+  --accent:      var(--gold-500);
+  --accent-hover: var(--gold-600);
+  --accent-pressed: var(--gold-700);
+
+  --border:      var(--cream-300);
+  --border-dark: var(--marine-500);
+  --divider:     rgba(26, 39, 68, 0.10);
+
+  /* Emergency — used ONLY for the top emergency bar and the
+     "Ich bin gerade mittendrin" button outline. Never for decoration. */
+  --emergency:   #9B3535;
+  --emergency-bg: #2A1414;
+
+  /* Focus — visible on both light and dark */
+  --focus-ring:  #C9A84C;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-display: 'Bebas Neue', 'Oswald', 'Impact', sans-serif;
+  --font-body:    'Source Sans 3', 'Source Sans Pro', -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', 'Consolas', monospace;
+
+  /* Display / heading sizes — Bebas Neue (all caps, condensed) */
+  --t-hero:      clamp(3.5rem, 7vw, 6.5rem);   /* 56–104px */
+  --t-h1:        clamp(2.75rem, 5vw, 4.5rem);  /* 44–72px */
+  --t-h2:        clamp(2rem, 3.5vw, 3rem);     /* 32–48px */
+  --t-h3:        clamp(1.5rem, 2.2vw, 2rem);   /* 24–32px */
+  --t-eyebrow:   0.875rem;                     /* 14px tracking-heavy */
+
+  /* Body — Source Sans (min 17px per accessibility brief) */
+  --t-lead:      1.375rem;    /* 22px — intro paragraphs */
+  --t-body:      1.0625rem;   /* 17px — min body size */
+  --t-small:     0.9375rem;   /* 15px — captions, meta */
+  --t-xs:        0.8125rem;   /* 13px — legal only */
+
+  --lh-display:  1.02;
+  --lh-heading:  1.15;
+  --lh-body:     1.6;
+  --lh-tight:    1.3;
+
+  --ls-display:  0.01em;      /* Bebas needs a hair of tracking */
+  --ls-eyebrow:  0.18em;      /* heavy tracking on small caps labels */
+  --ls-body:     0;
+
+  /* ===== SPACING (8pt base, with a 4pt half-step) ===== */
+  --s-0:  0;
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  24px;
+  --s-6:  32px;
+  --s-7:  48px;
+  --s-8:  64px;
+  --s-9:  96px;
+  --s-10: 128px;
+  --s-11: 192px;
+
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --container: 1200px;
+  --container-narrow: 780px;
+  --container-wide: 1440px;
+
+  /* ===== RADII ===== */
+  --r-none: 0;
+  --r-sm:   2px;   /* fine for tiny tags */
+  --r-md:   4px;   /* default for buttons, inputs — editorial, not bubbly */
+  --r-lg:   8px;   /* cards */
+  --r-xl:   16px;  /* hero/feature cards */
+  --r-pill: 999px; /* only for pill tags, not main buttons */
+
+  /* ===== SHADOWS ===== */
+  /* Minimal, editorial. No colorful glows. */
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgba(26, 39, 68, 0.06),
+              0 1px 1px rgba(26, 39, 68, 0.04);
+  --shadow-2: 0 2px 6px rgba(26, 39, 68, 0.08),
+              0 1px 2px rgba(26, 39, 68, 0.06);
+  --shadow-3: 0 8px 24px rgba(26, 39, 68, 0.10),
+              0 2px 6px rgba(26, 39, 68, 0.06);
+  --shadow-4: 0 18px 48px rgba(13, 20, 38, 0.18),
+              0 4px 12px rgba(13, 20, 38, 0.10);
+  --shadow-inset: inset 0 0 0 1px rgba(26, 39, 68, 0.08);
+
+  /* ===== BORDERS ===== */
+  --bw-hair: 1px;
+  --bw-rule: 2px;
+  --bw-heavy: 3px;
+
+  /* ===== MOTION ===== */
+  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+  --ease-in:       cubic-bezier(0.4, 0, 1, 1);
+  --dur-fast:    120ms;
+  --dur-base:    200ms;
+  --dur-slow:    320ms;
+  --dur-slower:  520ms;
+}
+
+/* ============================================
+   RESET + BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================
+   TYPE UTILITIES
+   ============================================ */
+.t-hero, .t-h1, .t-h2, .t-h3 {
+  font-family: var(--font-display);
+  font-weight: 400; /* Bebas has only one weight */
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+  margin: 0;
+  color: inherit;
+}
+.t-hero    { font-size: var(--t-hero); line-height: 0.98; }
+.t-h1      { font-size: var(--t-h1); }
+.t-h2      { font-size: var(--t-h2); }
+.t-h3      { font-size: var(--t-h3); line-height: var(--lh-heading); }
+
+.t-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.t-lead    { font-size: var(--t-lead); line-height: 1.5; color: var(--fg); }
+.t-body    { font-size: var(--t-body); line-height: var(--lh-body); }
+.t-small   { font-size: var(--t-small); line-height: 1.5; color: var(--fg-muted); }
+.t-xs      { font-size: var(--t-xs); line-height: 1.45; color: var(--fg-subtle); }
+
+.t-quote {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+}
+
+/* ============================================
+   SEMANTIC ELEMENT DEFAULTS
+   ============================================ */
+h1 { font: var(--t-h1) / var(--lh-display) var(--font-display); text-transform: uppercase; letter-spacing: var(--ls-display); margin: 0 0 var(--s-5); }
+h2 { font: var(--t-h2) / var(--lh-display) var(--font-display); text-transform: uppercase; letter-spacing: var(--ls-display); margin: 0 0 var(--s-4); }
+h3 { font: var(--t-h3) / var(--lh-heading) var(--font-display); text-transform: uppercase; letter-spacing: var(--ls-display); margin: 0 0 var(--s-3); }
+p  { margin: 0 0 var(--s-4); }
+a  {
+  color: var(--marine-700);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+a:hover { color: var(--gold-700); }
+
+/* Selection */
+::selection { background: var(--gold-500); color: var(--marine-700); }
+
+/* ============================================
+   FOCUS — visible, accessible
+   ============================================ */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================
+   LAYOUT PRIMITIVES
+   ============================================ */
+.container        { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.container-narrow { width: 100%; max-width: var(--container-narrow); margin-inline: auto; padding-inline: var(--gutter); }
+.container-wide   { width: 100%; max-width: var(--container-wide); margin-inline: auto; padding-inline: var(--gutter); }
+
+/* ============================================
+   SURFACE UTILITIES
+   ============================================ */
+.surface-cream   { background: var(--bg); color: var(--fg); }
+.surface-elevated { background: var(--bg-elevated); color: var(--fg); }
+.surface-marine  { background: var(--surface-dark); color: var(--fg-on-dark); }
+.surface-marine-deep { background: var(--marine-900); color: var(--fg-on-dark); }
+
+/* Reduced motion: honor the user's choice. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
