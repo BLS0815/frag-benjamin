@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schild statt Schwert — Hier findest Du Hilfe.</title>
+  <meta name="description" content="Betroffenen-Plattform zum Buch „Narzissmus verstehen – Schild statt Schwert" von Benjamin-Lucas Schmidt. Werkzeuge, Orientierung und Begleitung für Menschen in narzisstischen Beziehungsdynamiken.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Schild statt Schwert — Hier findest Du Hilfe.">
+  <meta property="og:description" content="Manche Beziehungen hinterlassen keine blauen Flecken – aber tiefe Spuren. Hier findest Du Werkzeuge und Orientierung.">
+  <link rel="stylesheet" href="project/colors_and_type.css">
+  <link rel="stylesheet" href="project/site.css">
+  <link rel="icon" type="image/svg+xml" href="project/assets/shield-mark.svg">
+  <style>
+    a.tuer { text-decoration: none; color: inherit; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NOTFALL-LEISTE
+     ============================================================ -->
+<div class="emergency-bar" id="emergency-bar" role="complementary" aria-label="Notfallkontakt">
+  <div class="emergency-bar__inner">
+    <span class="emergency-bar__dot" aria-hidden="true"></span>
+    <p>
+      <strong>Telefonseelsorge:</strong>&nbsp;
+      <a href="tel:08001110111">0800 111 0 111</a>
+      <span class="emergency-bar__sep">–</span>
+      kostenlos, 24h
+    </p>
+    <button class="emergency-bar__close" aria-label="Leiste schließen" id="bar-close">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 6 L18 18 M18 6 L6 18"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a href="#top" class="brand" aria-label="Schild statt Schwert — Startseite">
+      <svg width="34" height="41" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__wm">Schild statt Schwert</span>
+        <span class="brand__sm">Hier findest Du Hilfe</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#tueren"  data-nav="sofortzugang">Sofortzugang</a></li>
+        <li><a href="#tueren"  data-nav="verstehen">Verstehen</a></li>
+        <li><a href="#buch"    data-nav="buch">Buch</a></li>
+        <li><a href="#app"     data-nav="app">App</a></li>
+        <li><a href="#kontakt" data-nav="kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <button class="site-nav__toggle" aria-label="Menü öffnen" id="nav-toggle">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 7 H20 M4 12 H20 M4 17 H20"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="site-nav__mobile" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="#tueren">Sofortzugang</a></li>
+      <li><a href="#tueren">Verstehen</a></li>
+      <li><a href="#buch">Buch</a></li>
+      <li><a href="#app">App</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="top">
+  <div class="hero__inner container">
+    <p class="eyebrow eyebrow--gold">Betroffenen-Plattform</p>
+    <h1 class="hero__title">
+      Hier findest<br>Du Hilfe.
+    </h1>
+    <p class="hero__lead">
+      Manche Beziehungen hinterlassen keine blauen Flecken –<br>
+      aber tiefe Spuren.
+    </p>
+    <div class="hero__ctas">
+      <a href="#tueren" class="btn btn-emergency btn-md">Ich bin gerade mittendrin</a>
+      <a href="#tueren" class="btn btn-primary btn-md">Ich will verstehen</a>
+      <a href="#buch"   class="btn btn-outline-light btn-md">Zum Buch</a>
+    </div>
+    <p class="hero__note">Diese Seite ist anonym nutzbar. Keine Anmeldung. Keine Cookies.</p>
+  </div>
+  <div class="hero__decoration" aria-hidden="true">
+    <img src="project/assets/shield-labyrinth-logo.svg" alt="">
+  </div>
+</section>
+
+<!-- ============================================================
+     DREI TÜREN
+     ============================================================ -->
+<section class="tueren" id="tueren">
+  <div class="container">
+    <p class="eyebrow">Drei Türen</p>
+    <h2 class="section-title">Wo möchtest Du anfangen?</h2>
+    <div class="tueren__grid">
+
+      <a href="#tueren" class="tuer">
+        <svg class="icon tuer__icon" width="40" height="40" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2 L20 5 V11 C20 16 16.5 20 12 22 C7.5 20 4 16 4 11 V5 Z"/>
+        </svg>
+        <h3 class="tuer__title">Sofortzugang</h3>
+        <p class="tuer__text">Werkzeuge für den Moment, in dem keine Zeit ist.</p>
+        <span class="tuer__go">
+          Öffnen
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12 H19 M13 6 L19 12 L13 18"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="#tueren" class="tuer">
+        <svg class="icon tuer__icon" width="40" height="40" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M16 8 L13.5 13 L8 16 L10.5 11 Z" fill="currentColor" stroke="none"/>
+        </svg>
+        <h3 class="tuer__title">Verstehen &amp; Einordnen</h3>
+        <p class="tuer__text">Woran erkenne ich, was hier passiert?</p>
+        <span class="tuer__go">
+          Öffnen
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12 H19 M13 6 L19 12 L13 18"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="#buch" class="tuer">
+        <svg class="icon tuer__icon" width="40" height="40" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4 H10 C11.1 4 12 4.9 12 6 V20 H6 C4.9 20 4 19.1 4 18 Z"/>
+          <path d="M20 4 H14 C12.9 4 12 4.9 12 6 V20 H18 C19.1 20 20 19.1 20 18 Z"/>
+        </svg>
+        <h3 class="tuer__title">Das Buch</h3>
+        <p class="tuer__text">32 Kapitel. Praxisnah. Sofort anwendbar.</p>
+        <span class="tuer__go">
+          Öffnen
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12 H19 M13 6 L19 12 L13 18"/>
+          </svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ZITAT
+     ============================================================ -->
+<section class="bigquote">
+  <div class="container-narrow">
+    <p class="eyebrow eyebrow--gold">Zwischenwort</p>
+    <blockquote class="bigquote__text">
+      „Keine Treppe<br>ist unendlich."
+    </blockquote>
+    <cite class="bigquote__cite">Benjamin-Lucas Schmidt</cite>
+  </div>
+</section>
+
+<!-- ============================================================
+     BUCH
+     ============================================================ -->
+<section class="buch" id="buch">
+  <div class="container buch__grid">
+    <div class="buch__cover">
+      <img src="project/assets/book-cover-front.png"
+           alt="Buchcover: Narzissmus verstehen — Schild statt Schwert von Benjamin-Lucas Schmidt">
+    </div>
+    <div class="buch__meta">
+      <p class="eyebrow">Das Buch</p>
+      <h2 class="section-title">Narzissmus verstehen — Schild statt Schwert</h2>
+      <p class="buch__lead">
+        Kein Theoriewerk, sondern ein praktischer Leitfaden.
+        Du lernst, Dich zu schützen, Ruhe in den Alltag zu bringen und
+        Entscheidungen klar zu treffen — auch dann, wenn das Gegenüber
+        keine Verantwortung übernimmt.
+      </p>
+      <ul class="buch__facts">
+        <li><span>32</span> Kapitel · Checklisten · Vorlagen</li>
+        <li><span>286</span> Seiten · Klappenbroschur</li>
+        <li><span>ISBN</span> 979-8266452626</li>
+      </ul>
+      <div class="buch__ctas">
+        <a href="https://www.amazon.de/dp/B0FTF8JGR9"
+           class="btn btn-primary btn-md"
+           target="_blank" rel="noopener noreferrer">
+          Jetzt auf Amazon
+        </a>
+        <a href="#" class="btn btn-ghost btn-md">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 4 V15 M7 11 L12 16 L17 11 M5 19 H19"/>
+          </svg>
+          Leseprobe (PDF)
+        </a>
+      </div>
+      <p class="buch__note">
+        Erhältlich im Buchhandel und bei Amazon. Diese Seite verkauft nicht direkt — wir verweisen an unabhängige Händler.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     APP-TEASER
+     ============================================================ -->
+<section class="app-teaser" id="app">
+  <div class="container app-teaser__grid">
+    <div class="app-teaser__copy">
+      <p class="eyebrow eyebrow--gold">In Arbeit</p>
+      <h2 class="section-title">Frag Benjamin</h2>
+      <p class="app-teaser__lead">
+        Eine ruhige App-Begleitung zum Buch. Du stellst eine Frage –
+        und bekommst Kapitel, Werkzeuge und Übungen zurück, die zu Deiner Situation passen.
+      </p>
+      <p class="app-teaser__body">
+        Noch nicht verfügbar. Wenn Du magst, sag uns Bescheid, sobald es losgeht.
+        Keine Werbung, nur eine einzige Nachricht zum Start.
+      </p>
+
+      <!--
+        Formspree: Trage Deine eigene Formspree-ID ein (nach https://formspree.io registrieren).
+        Ersetze IHRE_FORMSPREE_ID mit der ID aus Deinem Formspree-Dashboard.
+      -->
+      <form class="app-teaser__form" id="waitlist-form"
+            action="https://formspree.io/f/IHRE_FORMSPREE_ID"
+            method="POST">
+        <input type="hidden" name="_subject" value="Warteliste: Frag Benjamin">
+        <div class="app-teaser__form-field">
+          <input type="email" name="email" class="field"
+                 placeholder="Deine E-Mail-Adresse" required
+                 aria-label="E-Mail-Adresse für die Warteliste">
+        </div>
+        <button type="submit" class="btn btn-primary btn-md">Auf die Warteliste</button>
+      </form>
+      <div class="app-teaser__sent" id="waitlist-sent" role="status" hidden>
+        Danke. Wir melden uns, sobald die App startet.
+      </div>
+    </div>
+
+    <div class="app-teaser__visual" aria-hidden="true">
+      <div class="phone">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <div class="phone__eyebrow">Frag Benjamin</div>
+          <div class="phone__q">Mein Partner dreht mir<br>jedes Wort im Mund um.</div>
+          <div class="phone__sep"></div>
+          <div class="phone__label">Passende Kapitel</div>
+          <div class="phone__row">
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4 H10 C11.1 4 12 4.9 12 6 V20 H6 C4.9 20 4 19.1 4 18 Z"/>
+              <path d="M20 4 H14 C12.9 4 12 4.9 12 6 V20 H18 C19.1 20 20 19.1 20 18 Z"/>
+            </svg>
+            Kap. 07 · Worte, die verletzen
+          </div>
+          <div class="phone__row">
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4 H10 C11.1 4 12 4.9 12 6 V20 H6 C4.9 20 4 19.1 4 18 Z"/>
+              <path d="M20 4 H14 C12.9 4 12 4.9 12 6 V20 H18 C19.1 20 20 19.1 20 18 Z"/>
+            </svg>
+            Kap. 12 · Ruhe im Gespräch
+          </div>
+          <div class="phone__row">
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2 L20 5 V11 C20 16 16.5 20 12 22 C7.5 20 4 16 4 11 V5 Z"/>
+            </svg>
+            Werkzeug · Der Stopp-Satz
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" id="kontakt">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <svg width="40" height="48" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="site-footer__wm">Schild statt Schwert</div>
+        <p class="site-footer__mission">
+          Eine Anlaufstelle für Menschen in narzisstischen Beziehungsdynamiken.
+          Unabhängig. Werbefrei. Anonym nutzbar.
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__label">Kontakt</p>
+      <a href="mailto:b.lucas.s@web.de" class="site-footer__mail">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="M3 7 L12 13 L21 7"/>
+        </svg>
+        b.lucas.s@web.de
+      </a>
+      <p class="site-footer__author">
+        Benjamin-Lucas Schmidt<br>Hamburg · Verlag Wombat
+      </p>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__label">Rechtliches</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="datenschutz.html#hinweis">Rechtlicher Hinweis</a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__label">Im Notfall</p>
+      <p>Telefonseelsorge<br><a href="tel:08001110111">0800 111 0 111</a></p>
+      <p>Hilfetelefon Gewalt<br><a href="tel:08000116016">08000 116 016</a></p>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom container">
+    <p>&copy; 2026 Schild statt Schwert. Diese Seite ersetzt keine Therapie.</p>
+    <p class="site-footer__ds">Kein Tracking · Keine Cookies · Kein Google Analytics</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* --- Notfall-Leiste schließen --- */
+  document.getElementById('bar-close').addEventListener('click', function () {
+    var bar = document.getElementById('emergency-bar');
+    bar.style.transition = 'opacity 0.2s';
+    bar.style.opacity = '0';
+    setTimeout(function () { bar.remove(); }, 200);
+  });
+
+  /* --- Header-Schatten beim Scrollen --- */
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('is-scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* --- Mobile Navigation --- */
+  var toggle    = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+
+  var ICON_MENU  = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"/></svg>';
+  var ICON_CLOSE = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>';
+
+  function closeMobileNav() {
+    mobileNav.hidden = true;
+    toggle.innerHTML = ICON_MENU;
+    toggle.setAttribute('aria-label', 'Menü öffnen');
+  }
+
+  toggle.addEventListener('click', function () {
+    if (!mobileNav.hidden) {
+      closeMobileNav();
+    } else {
+      mobileNav.hidden = false;
+      toggle.innerHTML = ICON_CLOSE;
+      toggle.setAttribute('aria-label', 'Menü schließen');
+    }
+  });
+
+  mobileNav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  /* --- Smooth Scroll für Anker-Links --- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        var offset = header.offsetHeight + 8;
+        var y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        closeMobileNav();
+      }
+    });
+  });
+
+  /* --- Aktive Navigation via IntersectionObserver --- */
+  var navLinks = document.querySelectorAll('.site-nav a[data-nav]');
+
+  var sectionToNav = {
+    'top':     'sofortzugang',
+    'tueren':  'sofortzugang',
+    'buch':    'buch',
+    'app':     'app',
+    'kontakt': 'kontakt'
+  };
+
+  function setActive(key) {
+    navLinks.forEach(function (a) {
+      a.classList.toggle('is-active', a.dataset.nav === key);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          setActive(sectionToNav[entry.target.id] || entry.target.id);
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    document.querySelectorAll('section[id], footer[id]').forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
+  /* --- Wartelisten-Formular (Formspree AJAX) --- */
+  var form = document.getElementById('waitlist-form');
+  var sent = document.getElementById('waitlist-sent');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Wird gesendet …';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        form.hidden = true;
+        sent.hidden = false;
+      } else {
+        /* Fallback: normales Submit, wenn AJAX fehlschlägt */
+        form.submit();
+      }
+    }).catch(function () {
+      form.submit();
+    });
+  });
+
+}());
+</script>
+</body>
+</html>

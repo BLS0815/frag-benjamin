@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum — Schild statt Schwert</title>
+  <meta name="description" content="Impressum der Website schild-statt-schwert.de gemäß § 5 TMG.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="project/colors_and_type.css">
+  <link rel="stylesheet" href="project/site.css">
+  <link rel="icon" type="image/svg+xml" href="project/assets/shield-mark.svg">
+  <style>
+    /* Unterseiten-Layout */
+    .legal-page {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      padding-block: clamp(3rem, 7vw, 5rem) clamp(4rem, 9vw, 7rem);
+    }
+    .legal-page h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-display);
+      color: var(--marine-700);
+      margin: 0 0 var(--s-7);
+      line-height: 1.05;
+    }
+    .legal-page h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-display);
+      color: var(--marine-700);
+      margin: var(--s-7) 0 var(--s-4);
+      line-height: 1.1;
+    }
+    .legal-page p,
+    .legal-page address {
+      font-size: var(--t-body);
+      line-height: var(--lh-body);
+      color: var(--ink-800);
+      margin: 0 0 var(--s-4);
+      font-style: normal;
+    }
+    .legal-page a { color: var(--marine-700); }
+    .legal-page a:hover { color: var(--gold-700); }
+    .legal-page .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+      text-decoration: none;
+      margin-bottom: var(--s-7);
+      transition: color var(--dur-fast) var(--ease-standard);
+    }
+    .legal-page .back-link:hover { color: var(--marine-700); text-decoration: none; }
+    .legal-page hr {
+      border: none;
+      border-top: 1px solid var(--cream-300);
+      margin: var(--s-7) 0;
+    }
+    .placeholder {
+      background: rgba(201,168,76,.12);
+      border: 1px dashed var(--gold-500);
+      border-radius: var(--r-md);
+      padding: 4px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--gold-700);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NOTFALL-LEISTE -->
+<div class="emergency-bar" id="emergency-bar" role="complementary" aria-label="Notfallkontakt">
+  <div class="emergency-bar__inner">
+    <span class="emergency-bar__dot" aria-hidden="true"></span>
+    <p>
+      <strong>Telefonseelsorge:</strong>&nbsp;
+      <a href="tel:08001110111">0800 111 0 111</a>
+      <span class="emergency-bar__sep">–</span>
+      kostenlos, 24h
+    </p>
+    <button class="emergency-bar__close" aria-label="Leiste schließen" id="bar-close">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 6 L18 18 M18 6 L6 18"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="site-header is-scrolled" id="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="brand" aria-label="Schild statt Schwert — Startseite">
+      <svg width="34" height="41" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__wm">Schild statt Schwert</span>
+        <span class="brand__sm">Hier findest Du Hilfe</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html#tueren">Sofortzugang</a></li>
+        <li><a href="index.html#tueren">Verstehen</a></li>
+        <li><a href="index.html#buch">Buch</a></li>
+        <li><a href="index.html#app">App</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="site-nav__toggle" aria-label="Menü öffnen" id="nav-toggle">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 7 H20 M4 12 H20 M4 17 H20"/>
+      </svg>
+    </button>
+  </div>
+  <div class="site-nav__mobile" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="index.html#tueren">Sofortzugang</a></li>
+      <li><a href="index.html#tueren">Verstehen</a></li>
+      <li><a href="index.html#buch">Buch</a></li>
+      <li><a href="index.html#app">App</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="legal-page">
+
+    <a href="index.html" class="back-link">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12 H5 M11 18 L5 12 L11 6"/>
+      </svg>
+      Zurück zur Startseite
+    </a>
+
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <address>
+      Benjamin-Lucas Schmidt<br>
+      <span class="placeholder">Straße und Hausnummer eintragen</span><br>
+      <span class="placeholder">PLZ und Ort eintragen</span>
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:b.lucas.s@web.de">b.lucas.s@web.de</a>
+    </p>
+    <p>
+      Verlag Wombat · Hamburg
+    </p>
+
+    <hr>
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <address>
+      Benjamin-Lucas Schmidt<br>
+      <span class="placeholder">Straße und Hausnummer eintragen</span><br>
+      <span class="placeholder">PLZ und Ort eintragen</span>
+    </address>
+
+    <hr>
+
+    <h2>Urheberrecht</h2>
+    <p>
+      Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen
+      dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+      der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
+      Zustimmung des jeweiligen Autors bzw. Erstellers.
+    </p>
+
+    <hr>
+
+    <h2>EU-Streitschlichtung</h2>
+    <p>
+      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+      <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
+        https://ec.europa.eu/consumers/odr/
+      </a>.<br>
+      Unsere E-Mail-Adresse findest Du oben im Impressum.
+    </p>
+
+    <h2>Verbraucherstreitbeilegung</h2>
+    <p>
+      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+      Verbraucherschlichtungsstelle teilzunehmen.
+    </p>
+
+    <hr>
+
+    <h2 id="hinweis-gesundheit">Gesundheitlicher Hinweis</h2>
+    <p>
+      Diese Website ist kein Ersatz für eine professionelle psychologische oder
+      psychiatrische Beratung, Diagnose oder Behandlung. Bei akuten Krisen wende Dich
+      bitte an die Telefonseelsorge (<a href="tel:08001110111">0800 111 0 111</a>,
+      kostenlos, 24h) oder einen Arzt.
+    </p>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <svg width="40" height="48" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="site-footer__wm">Schild statt Schwert</div>
+        <p class="site-footer__mission">
+          Eine Anlaufstelle für Menschen in narzisstischen Beziehungsdynamiken.
+          Unabhängig. Werbefrei. Anonym nutzbar.
+        </p>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Kontakt</p>
+      <a href="mailto:b.lucas.s@web.de" class="site-footer__mail">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="M3 7 L12 13 L21 7"/>
+        </svg>
+        b.lucas.s@web.de
+      </a>
+      <p class="site-footer__author">Benjamin-Lucas Schmidt<br>Hamburg · Verlag Wombat</p>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Rechtliches</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="datenschutz.html#hinweis">Rechtlicher Hinweis</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Im Notfall</p>
+      <p>Telefonseelsorge<br><a href="tel:08001110111">0800 111 0 111</a></p>
+      <p>Hilfetelefon Gewalt<br><a href="tel:08000116016">08000 116 016</a></p>
+    </div>
+  </div>
+  <div class="site-footer__bottom container">
+    <p>&copy; 2026 Schild statt Schwert. Diese Seite ersetzt keine Therapie.</p>
+    <p class="site-footer__ds">Kein Tracking · Keine Cookies · Kein Google Analytics</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  document.getElementById('bar-close').addEventListener('click', function () {
+    var bar = document.getElementById('emergency-bar');
+    bar.style.transition = 'opacity 0.2s';
+    bar.style.opacity = '0';
+    setTimeout(function () { bar.remove(); }, 200);
+  });
+  var toggle = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  var ICON_MENU  = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"/></svg>';
+  var ICON_CLOSE = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>';
+  toggle.addEventListener('click', function () {
+    if (!mobileNav.hidden) {
+      mobileNav.hidden = true; toggle.innerHTML = ICON_MENU; toggle.setAttribute('aria-label', 'Menü öffnen');
+    } else {
+      mobileNav.hidden = false; toggle.innerHTML = ICON_CLOSE; toggle.setAttribute('aria-label', 'Menü schließen');
+    }
+  });
+}());
+</script>
+</body>
+</html>

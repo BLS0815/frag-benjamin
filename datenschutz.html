@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung — Schild statt Schwert</title>
+  <meta name="description" content="Datenschutzerklärung der Website schild-statt-schwert.de gemäß DSGVO.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="project/colors_and_type.css">
+  <link rel="stylesheet" href="project/site.css">
+  <link rel="icon" type="image/svg+xml" href="project/assets/shield-mark.svg">
+  <style>
+    .legal-page {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      padding-block: clamp(3rem, 7vw, 5rem) clamp(4rem, 9vw, 7rem);
+    }
+    .legal-page h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-display);
+      color: var(--marine-700);
+      margin: 0 0 var(--s-7);
+      line-height: 1.05;
+    }
+    .legal-page h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-display);
+      color: var(--marine-700);
+      margin: var(--s-7) 0 var(--s-4);
+      line-height: 1.1;
+    }
+    .legal-page h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-display);
+      color: var(--marine-700);
+      margin: var(--s-6) 0 var(--s-3);
+      line-height: 1.2;
+    }
+    .legal-page p,
+    .legal-page address,
+    .legal-page li {
+      font-size: var(--t-body);
+      line-height: var(--lh-body);
+      color: var(--ink-800);
+      margin: 0 0 var(--s-4);
+      font-style: normal;
+    }
+    .legal-page ul {
+      padding-left: var(--s-5);
+      margin: 0 0 var(--s-5);
+    }
+    .legal-page li { margin-bottom: var(--s-2); }
+    .legal-page a { color: var(--marine-700); }
+    .legal-page a:hover { color: var(--gold-700); }
+    .legal-page .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+      text-decoration: none;
+      margin-bottom: var(--s-7);
+      transition: color var(--dur-fast) var(--ease-standard);
+    }
+    .legal-page .back-link:hover { color: var(--marine-700); text-decoration: none; }
+    .legal-page hr {
+      border: none;
+      border-top: 1px solid var(--cream-300);
+      margin: var(--s-7) 0;
+    }
+    .info-box {
+      background: var(--cream-50);
+      border-left: 3px solid var(--gold-500);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      padding: var(--s-4) var(--s-5);
+      margin: 0 0 var(--s-5);
+    }
+    .info-box p { margin: 0; color: var(--ink-600); font-size: 15px; }
+  </style>
+</head>
+<body>
+
+<!-- NOTFALL-LEISTE -->
+<div class="emergency-bar" id="emergency-bar" role="complementary" aria-label="Notfallkontakt">
+  <div class="emergency-bar__inner">
+    <span class="emergency-bar__dot" aria-hidden="true"></span>
+    <p>
+      <strong>Telefonseelsorge:</strong>&nbsp;
+      <a href="tel:08001110111">0800 111 0 111</a>
+      <span class="emergency-bar__sep">–</span>
+      kostenlos, 24h
+    </p>
+    <button class="emergency-bar__close" aria-label="Leiste schließen" id="bar-close">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 6 L18 18 M18 6 L6 18"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="site-header is-scrolled" id="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="brand" aria-label="Schild statt Schwert — Startseite">
+      <svg width="34" height="41" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__wm">Schild statt Schwert</span>
+        <span class="brand__sm">Hier findest Du Hilfe</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html#tueren">Sofortzugang</a></li>
+        <li><a href="index.html#tueren">Verstehen</a></li>
+        <li><a href="index.html#buch">Buch</a></li>
+        <li><a href="index.html#app">App</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="site-nav__toggle" aria-label="Menü öffnen" id="nav-toggle">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 7 H20 M4 12 H20 M4 17 H20"/>
+      </svg>
+    </button>
+  </div>
+  <div class="site-nav__mobile" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="index.html#tueren">Sofortzugang</a></li>
+      <li><a href="index.html#tueren">Verstehen</a></li>
+      <li><a href="index.html#buch">Buch</a></li>
+      <li><a href="index.html#app">App</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="legal-page">
+
+    <a href="index.html" class="back-link">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12 H5 M11 18 L5 12 L11 6"/>
+      </svg>
+      Zurück zur Startseite
+    </a>
+
+    <h1>Datenschutz&shy;erklärung</h1>
+
+    <div class="info-box">
+      <p>
+        Diese Seite verwendet keine Tracking-Cookies, kein Google Analytics und
+        keine sozialen Netzwerk-Plugins. Es werden keine personenbezogenen Daten
+        zu Werbezwecken verarbeitet.
+      </p>
+    </div>
+
+    <h2>1. Verantwortlicher</h2>
+    <address>
+      Benjamin-Lucas Schmidt<br>
+      E-Mail: <a href="mailto:b.lucas.s@web.de">b.lucas.s@web.de</a>
+    </address>
+    <p>
+      Bei Fragen zum Datenschutz erreichst Du den Verantwortlichen unter der oben
+      angegebenen E-Mail-Adresse.
+    </p>
+
+    <hr>
+
+    <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+    <p>
+      Diese Website ist auf minimale Datenverarbeitung ausgelegt. Es werden keine
+      Analyse- oder Tracking-Dienste eingesetzt. Es werden keine Cookies gesetzt,
+      die über die technisch notwendige Funktion hinausgehen. Es ist keine Anmeldung
+      oder Registrierung erforderlich.
+    </p>
+
+    <hr>
+
+    <h2>3. Datenerfassung auf dieser Website</h2>
+
+    <h3>Server-Logdateien</h3>
+    <p>
+      Beim Aufruf dieser Website übermittelt Dein Browser automatisch Informationen
+      an den Webserver. Diese sogenannten Server-Logdateien enthalten:
+    </p>
+    <ul>
+      <li>IP-Adresse des anfragenden Geräts (in der Regel anonymisiert)</li>
+      <li>Datum und Uhrzeit der Anfrage</li>
+      <li>Aufgerufene Seite (URL)</li>
+      <li>Browsertyp und -version</li>
+      <li>Betriebssystem</li>
+      <li>Verweisende Website (Referrer), sofern vorhanden</li>
+    </ul>
+    <p>
+      Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
+      (berechtigtes Interesse an der technisch fehlerfreien Darstellung der Website
+      und zur Erkennung von Missbrauch). Die Logdateien werden spätestens nach
+      14 Tagen gelöscht, sofern sie nicht zur Aufklärung eines Sicherheitsvorfalls
+      benötigt werden.
+    </p>
+
+    <h3>Wartelisten-Formular (App „Frag Benjamin")</h3>
+    <p>
+      Wenn Du Dich auf die Warteliste für die App einträgst, wird Deine
+      E-Mail-Adresse an den Dienst <strong>Formspree</strong>
+      (Formspree, Inc., USA) übermittelt. Formspree leitet die Nachricht
+      an den Seitenbetreiber weiter.
+    </p>
+    <p>
+      Rechtsgrundlage ist Deine ausdrückliche Einwilligung gemäß
+      Art. 6 Abs. 1 lit. a DSGVO. Du kannst Deine Einwilligung jederzeit
+      durch Nachricht an <a href="mailto:b.lucas.s@web.de">b.lucas.s@web.de</a>
+      widerrufen; in diesem Fall wird Deine E-Mail-Adresse umgehend gelöscht.
+    </p>
+    <p>
+      Formspree verarbeitet Daten auf Servern in den USA. Die Übermittlung
+      in Drittländer erfolgt auf Basis der Standardvertragsklauseln der EU-Kommission.
+      Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy"
+      target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a>.
+    </p>
+
+    <h3>Selbstgehostete Schriften</h3>
+    <p>
+      Diese Website nutzt ausschließlich lokal eingebundene Schriften
+      (Bebas Neue, Source Sans 3). Die Schriftdateien werden direkt vom
+      Webserver dieser Seite geladen. Es werden dabei keine Daten an
+      Google oder Dritte übertragen.
+    </p>
+
+    <hr>
+
+    <h2>4. Externe Links</h2>
+    <p>
+      Diese Website enthält Links zu externen Seiten (z. B. Amazon). Sobald Du
+      auf einen solchen Link klickst, verlässt Du diese Website. Für die
+      Datenschutzpraktiken externer Seiten übernehmen wir keine Verantwortung.
+    </p>
+
+    <hr>
+
+    <h2>5. Deine Rechte</h2>
+    <p>Gemäß DSGVO hast Du folgende Rechte:</p>
+    <ul>
+      <li><strong>Auskunft</strong> (Art. 15 DSGVO): Du kannst Auskunft über die zu
+        Deiner Person gespeicherten Daten verlangen.</li>
+      <li><strong>Berichtigung</strong> (Art. 16 DSGVO): Du kannst die Berichtigung
+        unrichtiger Daten verlangen.</li>
+      <li><strong>Löschung</strong> (Art. 17 DSGVO): Du kannst die Löschung Deiner
+        Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten bestehen.</li>
+      <li><strong>Einschränkung</strong> (Art. 18 DSGVO): Du kannst die Einschränkung
+        der Verarbeitung verlangen.</li>
+      <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO): Du hast das Recht,
+        Deine Daten in einem strukturierten, maschinenlesbaren Format zu erhalten.</li>
+      <li><strong>Widerspruch</strong> (Art. 21 DSGVO): Du kannst der Verarbeitung
+        widersprechen, soweit diese auf berechtigtem Interesse beruht.</li>
+      <li><strong>Widerruf</strong> (Art. 7 DSGVO): Eine erteilte Einwilligung kannst
+        Du jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
+        Verarbeitung bleibt unberührt.</li>
+    </ul>
+    <p>
+      Um Deine Rechte auszuüben, wende Dich an:
+      <a href="mailto:b.lucas.s@web.de">b.lucas.s@web.de</a>
+    </p>
+
+    <h3>Beschwerde bei einer Aufsichtsbehörde</h3>
+    <p>
+      Du hast das Recht, Dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
+      Die zuständige Behörde für Hamburg ist der
+      <a href="https://datenschutz.hamburg.de/" target="_blank" rel="noopener noreferrer">
+        Hamburgische Beauftragte für Datenschutz und Informationsfreiheit</a>.
+    </p>
+
+    <hr>
+
+    <h2 id="hinweis">6. Rechtlicher Hinweis</h2>
+    <p>
+      Die Inhalte dieser Website dienen ausschließlich zur allgemeinen Information
+      und ersetzen keine professionelle psychologische, psychiatrische oder
+      medizinische Beratung, Diagnose oder Behandlung. Nutze bei einem Notfall
+      die Telefonseelsorge (<a href="tel:08001110111">0800 111 0 111</a>,
+      kostenlos, 24h) oder suche einen Arzt auf.
+    </p>
+    <p>
+      Alle Inhalte werden nach bestem Wissen und Gewissen erstellt; eine Garantie
+      für Vollständigkeit, Richtigkeit oder Aktualität kann nicht übernommen werden.
+    </p>
+
+    <hr>
+
+    <p>
+      <em>Stand: April 2026</em>
+    </p>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <svg width="40" height="48" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="site-footer__wm">Schild statt Schwert</div>
+        <p class="site-footer__mission">
+          Eine Anlaufstelle für Menschen in narzisstischen Beziehungsdynamiken.
+          Unabhängig. Werbefrei. Anonym nutzbar.
+        </p>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Kontakt</p>
+      <a href="mailto:b.lucas.s@web.de" class="site-footer__mail">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="M3 7 L12 13 L21 7"/>
+        </svg>
+        b.lucas.s@web.de
+      </a>
+      <p class="site-footer__author">Benjamin-Lucas Schmidt<br>Hamburg · Verlag Wombat</p>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Rechtliches</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="datenschutz.html#hinweis">Rechtlicher Hinweis</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Im Notfall</p>
+      <p>Telefonseelsorge<br><a href="tel:08001110111">0800 111 0 111</a></p>
+      <p>Hilfetelefon Gewalt<br><a href="tel:08000116016">08000 116 016</a></p>
+    </div>
+  </div>
+  <div class="site-footer__bottom container">
+    <p>&copy; 2026 Schild statt Schwert. Diese Seite ersetzt keine Therapie.</p>
+    <p class="site-footer__ds">Kein Tracking · Keine Cookies · Kein Google Analytics</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  document.getElementById('bar-close').addEventListener('click', function () {
+    var bar = document.getElementById('emergency-bar');
+    bar.style.transition = 'opacity 0.2s';
+    bar.style.opacity = '0';
+    setTimeout(function () { bar.remove(); }, 200);
+  });
+  var toggle = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  var ICON_MENU  = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"/></svg>';
+  var ICON_CLOSE = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>';
+  toggle.addEventListener('click', function () {
+    if (!mobileNav.hidden) {
+      mobileNav.hidden = true; toggle.innerHTML = ICON_MENU; toggle.setAttribute('aria-label', 'Menü öffnen');
+    } else {
+      mobileNav.hidden = false; toggle.innerHTML = ICON_CLOSE; toggle.setAttribute('aria-label', 'Menü schließen');
+    }
+  });
+}());
+</script>
+</body>
+</html>
