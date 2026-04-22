@@ -152,6 +152,11 @@
       border-radius: var(--r-lg);
       box-shadow: 0 24px 64px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4);
       display: block;
+      transition: transform 0.4s cubic-bezier(0.2,0,0.2,1), box-shadow 0.4s cubic-bezier(0.2,0,0.2,1);
+    }
+    .roman__cover:hover {
+      transform: translateY(-6px) rotate(1.5deg);
+      box-shadow: 0 36px 80px rgba(0,0,0,0.7), 0 8px 24px rgba(0,0,0,0.5);
     }
     .roman__cover-label {
       font-size: var(--t-xs);
