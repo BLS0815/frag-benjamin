@@ -42,6 +42,133 @@
       font-size: var(--t-body);
       color: var(--marine-700);
       margin: var(--s-6) 0 0;
+
+    /* ---- Das Haus, das hörte ---- */
+    .roman {
+      background: var(--marine-700);
+      color: var(--fg-on-dark);
+      padding-block: clamp(4rem, 8vw, 7rem);
+    }
+    .roman__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+    @media (max-width: 700px) {
+      .roman__grid { grid-template-columns: 1fr; }
+      .roman__cover-col { order: -1; }
+    }
+    .roman__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: var(--s-3);
+      font-size: var(--t-eyebrow);
+      font-weight: 600;
+      letter-spacing: var(--ls-eyebrow);
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin: 0 0 var(--s-5);
+    }
+    .roman__eyebrow::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background: var(--gold-500);
+      flex-shrink: 0;
+    }
+    .roman__title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.0;
+      letter-spacing: var(--ls-display);
+      text-transform: uppercase;
+      color: var(--fg-on-dark);
+      margin: 0 0 var(--s-4);
+    }
+    .roman__subtitle {
+      font-style: italic;
+      font-size: 1.125rem;
+      color: var(--gold-400);
+      margin: 0 0 var(--s-5);
+    }
+    .roman__quote {
+      border-left: 3px solid var(--gold-500);
+      padding-left: var(--s-5);
+      margin: 0 0 var(--s-5);
+      font-style: italic;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--fg-on-dark-muted);
+    }
+    .roman__body {
+      font-size: var(--t-body);
+      line-height: 1.7;
+      color: var(--fg-on-dark-muted);
+      margin: 0 0 var(--s-6);
+    }
+    .roman__cta {
+      display: flex;
+      align-items: center;
+      gap: var(--s-5);
+      flex-wrap: wrap;
+      margin-bottom: var(--s-7);
+    }
+    .roman__cta-note {
+      font-size: var(--t-small);
+      color: var(--fg-on-dark-muted);
+      margin: 0;
+    }
+    .roman__facts {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: var(--s-6);
+      border-top: 1px solid var(--marine-500);
+      padding-top: var(--s-5);
+      list-style: none;
+      margin: 0;
+      padding-inline-start: 0;
+    }
+    .roman__facts li { margin: 0; }
+    .roman__facts span {
+      display: block;
+      font-size: var(--t-xs);
+      font-weight: 600;
+      letter-spacing: var(--ls-eyebrow);
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-bottom: 4px;
+    }
+    .roman__facts p {
+      font-size: var(--t-small);
+      color: var(--fg-on-dark-muted);
+      margin: 0;
+    }
+    .roman__cover {
+      width: 100%;
+      max-width: 320px;
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-4);
+      display: block;
+    }
+    .roman__cover-label {
+      font-size: var(--t-xs);
+      font-weight: 600;
+      letter-spacing: var(--ls-eyebrow);
+      text-transform: uppercase;
+      color: var(--fg-on-dark-muted);
+      margin: var(--s-5) 0 var(--s-3);
+    }
+    .roman__mehr {
+      font-size: var(--t-small);
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      text-decoration: none;
+    }
+    .roman__mehr:hover { color: var(--gold-300); }
     }
   </style>
 </head>
@@ -280,6 +407,54 @@
       <p class="buch__note">
         Erhältlich im Buchhandel und bei Amazon. Diese Seite verkauft nicht direkt — wir verweisen an unabhängige Händler.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DAS HAUS, DAS HÖRTE
+     ============================================================ -->
+<section class="roman" id="roman">
+  <div class="container roman__grid">
+    <div class="roman__copy">
+      <p class="roman__eyebrow">Dazu passt · Roman</p>
+      <h2 class="roman__title">Das Haus,<br>das hörte.</h2>
+      <p class="roman__subtitle">Spannung zwischen Nähe, Erinnerung und Stille.</p>
+      <blockquote class="roman__quote">
+        „Manche Häuser hören länger zu, als ihre Bewohner sprechen."
+      </blockquote>
+      <p class="roman__body">
+        Ein Roman desselben Autors — literarisch statt erklärend.
+        Er erzählt, was das Sachbuch benennt: eine Mutter-Tochter-Dynamik
+        zwischen Manipulation und Sehnsucht, erzählt mit der Ruhe eines alten Hauses.
+      </p>
+      <div class="roman__cta">
+        <a href="https://www.bod.de/buchshop/das-haus-das-hoerte-benjamin-lucas-schmidt-9783695106004.html"
+           class="btn btn-primary btn-md"
+           target="_blank" rel="noopener noreferrer">
+          Bei BoD ansehen
+          <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17 L17 7 M7 7 H17 V17"/>
+          </svg>
+        </a>
+        <p class="roman__cta-note">Überall, wo es Bücher gibt.</p>
+      </div>
+      <ul class="roman__facts">
+        <li><span>Hardcover</span><p>322 Seiten</p></li>
+        <li><span>ISBN</span><p>978-3-695-10600-4</p></li>
+        <li><span>Verlag</span><p>BoD – Books on Demand</p></li>
+      </ul>
+    </div>
+    <div class="roman__cover-col">
+      <img src="project/assets/book-cover-das-haus.jpg"
+           alt="Buchcover: Das Haus, das hörte von Benjamin-Lucas Schmidt"
+           class="roman__cover">
+      <p class="roman__cover-label">Ein Roman von Benjamin-Lucas Schmidt</p>
+      <a href="https://www.bod.de/buchshop/das-haus-das-hoerte-benjamin-lucas-schmidt-9783695106004.html"
+         class="roman__mehr" target="_blank" rel="noopener noreferrer">
+        Mehr vom Autor →
+      </a>
     </div>
   </div>
 </section>
