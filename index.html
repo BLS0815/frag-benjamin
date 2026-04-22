@@ -46,8 +46,8 @@
 
     /* ---- Das Haus, das hörte ---- */
     .roman {
-      background: var(--marine-700);
-      color: var(--fg-on-dark);
+      background: #1C1408;
+      color: #E8DFC8;
       padding-block: clamp(4rem, 8vw, 7rem);
     }
     .roman__grid {
@@ -68,7 +68,7 @@
       font-weight: 600;
       letter-spacing: var(--ls-eyebrow);
       text-transform: uppercase;
-      color: var(--gold-500);
+      color: #C8922A;
       margin: 0 0 var(--s-5);
     }
     .roman__eyebrow::before {
@@ -76,7 +76,7 @@
       display: block;
       width: 2rem;
       height: 2px;
-      background: var(--gold-500);
+      background: #C8922A;
       flex-shrink: 0;
     }
     .roman__title {
@@ -85,28 +85,28 @@
       line-height: 1.0;
       letter-spacing: var(--ls-display);
       text-transform: uppercase;
-      color: var(--fg-on-dark);
+      color: #E8DFC8;
       margin: 0 0 var(--s-4);
     }
     .roman__subtitle {
       font-style: italic;
       font-size: 1.125rem;
-      color: var(--gold-400);
+      color: #C8922A;
       margin: 0 0 var(--s-5);
     }
     .roman__quote {
-      border-left: 3px solid var(--gold-500);
+      border-left: 3px solid #C8922A;
       padding-left: var(--s-5);
       margin: 0 0 var(--s-5);
       font-style: italic;
       font-size: 1.125rem;
       line-height: 1.6;
-      color: var(--fg-on-dark-muted);
+      color: rgba(232,223,200,0.75);
     }
     .roman__body {
       font-size: var(--t-body);
       line-height: 1.7;
-      color: var(--fg-on-dark-muted);
+      color: rgba(232,223,200,0.75);
       margin: 0 0 var(--s-6);
     }
     .roman__cta {
@@ -118,14 +118,14 @@
     }
     .roman__cta-note {
       font-size: var(--t-small);
-      color: var(--fg-on-dark-muted);
+      color: rgba(232,223,200,0.55);
       margin: 0;
     }
     .roman__facts {
       display: grid;
       grid-template-columns: repeat(3, auto);
       gap: var(--s-6);
-      border-top: 1px solid var(--marine-500);
+      border-top: 1px solid rgba(200,146,42,0.25);
       padding-top: var(--s-5);
       list-style: none;
       margin: 0;
@@ -138,19 +138,19 @@
       font-weight: 600;
       letter-spacing: var(--ls-eyebrow);
       text-transform: uppercase;
-      color: var(--gold-500);
+      color: #C8922A;
       margin-bottom: 4px;
     }
     .roman__facts p {
       font-size: var(--t-small);
-      color: var(--fg-on-dark-muted);
+      color: rgba(232,223,200,0.65);
       margin: 0;
     }
     .roman__cover {
       width: 100%;
       max-width: 320px;
       border-radius: var(--r-lg);
-      box-shadow: var(--shadow-4);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4);
       display: block;
     }
     .roman__cover-label {
@@ -158,7 +158,7 @@
       font-weight: 600;
       letter-spacing: var(--ls-eyebrow);
       text-transform: uppercase;
-      color: var(--fg-on-dark-muted);
+      color: rgba(232,223,200,0.45);
       margin: var(--s-5) 0 var(--s-3);
     }
     .roman__mehr {
@@ -166,10 +166,10 @@
       font-weight: 600;
       letter-spacing: .06em;
       text-transform: uppercase;
-      color: var(--gold-400);
+      color: #C8922A;
       text-decoration: none;
     }
-    .roman__mehr:hover { color: var(--gold-300); }
+    .roman__mehr:hover { color: #E8A030; }
 
     /* Footer Facebook-Link */
     .site-footer__fb {
@@ -514,7 +514,8 @@
       </p>
       <div class="roman__cta">
         <a href="https://buchshop.bod.de/das-haus-das-hoerte-benjamin-lucas-schmidt-9783695106004"
-           class="btn btn-primary btn-md"
+           class="btn btn-md"
+           style="background:#C8922A;color:#1C1408;border-color:#C8922A;font-weight:700;"
            target="_blank" rel="noopener noreferrer">
           Bei BoD ansehen
           <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
