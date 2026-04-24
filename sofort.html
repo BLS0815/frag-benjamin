@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sofortzugang — Schild statt Schwert</title>
+  <meta name="description" content="Sofortzugang: Notfallnummern, Werkzeuge und Orientierung für Menschen in narzisstischen Beziehungsdynamiken.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="project/colors_and_type.css">
+  <link rel="stylesheet" href="project/site.css">
+  <link rel="icon" type="image/svg+xml" href="project/assets/shield-mark.svg">
+  <style>
+    /* ---- Sofort-Seite allgemein ---- */
+    .sofort-section {
+      padding-block: clamp(3.5rem, 7vw, 6rem);
+    }
+    .sofort-section--dark {
+      background: #1A2744;
+      color: #F5F0E8;
+    }
+    .sofort-section--light {
+      background: #F5F0E8;
+      color: #2C2C2C;
+    }
+
+    /* ---- Sektion 1: Notfall ---- */
+    .notfall__inner {
+      max-width: 860px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+    .notfall__intro {
+      font-style: italic;
+      font-size: var(--t-body);
+      color: rgba(245,240,232,0.75);
+      margin: 0 0 var(--s-6);
+      line-height: 1.7;
+    }
+    .notfall__headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: var(--ls-display);
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin: 0 0 var(--s-7);
+    }
+    .notfall__gruppen {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--s-7);
+    }
+    .notfall__gruppe-label {
+      font-size: var(--t-xs);
+      font-weight: 700;
+      letter-spacing: var(--ls-eyebrow);
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.5);
+      margin: 0 0 var(--s-4);
+    }
+    .notfall__nummer {
+      display: block;
+      margin-bottom: var(--s-5);
+    }
+    .notfall__nummer a {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 0.02em;
+      color: #C9A84C;
+      text-decoration: none;
+      line-height: 1.1;
+      display: block;
+    }
+    .notfall__nummer a:hover { color: #E8C86A; text-decoration: none; }
+    .notfall__nummer-name {
+      display: block;
+      font-size: var(--t-small);
+      color: rgba(245,240,232,0.8);
+      margin-top: 2px;
+    }
+    .notfall__nummer-meta {
+      display: block;
+      font-size: var(--t-xs);
+      color: rgba(245,240,232,0.5);
+      margin-top: 2px;
+    }
+
+    /* ---- Sektion 2: Sofort-Protokoll ---- */
+    .protokoll__inner {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+    .sofort-eyebrow {
+      font-size: var(--t-eyebrow);
+      font-weight: 700;
+      letter-spacing: var(--ls-eyebrow);
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin: 0 0 var(--s-4);
+    }
+    .sofort-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: var(--ls-display);
+      text-transform: uppercase;
+      color: #1A2744;
+      margin: 0 0 var(--s-7);
+    }
+    .sofort-headline--light {
+      color: #F5F0E8;
+    }
+    .protokoll__schritte {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--s-5);
+      margin-bottom: var(--s-7);
+    }
+    .protokoll__schritt {
+      background: #FFFFFF;
+      border-radius: var(--r-lg);
+      padding: var(--s-5);
+      box-shadow: var(--shadow-1);
+    }
+    .protokoll__schritt-nr {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: #C9A84C;
+      line-height: 1;
+      margin-bottom: var(--s-2);
+    }
+    .protokoll__schritt-titel {
+      font-weight: 700;
+      font-size: var(--t-body);
+      color: #1A2744;
+      margin: 0 0 var(--s-2);
+    }
+    .protokoll__schritt-text {
+      font-size: var(--t-small);
+      color: #5A5A5A;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .protokoll__saetze {
+      margin: 0 0 var(--s-6);
+    }
+    .protokoll__satz {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      letter-spacing: var(--ls-display);
+      text-transform: uppercase;
+      color: #C9A84C;
+      padding: var(--s-5) 0;
+      margin: 0;
+      line-height: 1.1;
+    }
+    .protokoll__trenner {
+      border: none;
+      border-top: 1px solid #C9A84C;
+      opacity: 0.35;
+      margin: var(--s-6) 0;
+    }
+    .protokoll__absaetze p {
+      font-style: italic;
+      font-size: var(--t-body);
+      line-height: 1.7;
+      color: #1A2744;
+      margin: 0 0 var(--s-5);
+    }
+
+    /* ---- Sektion 3: Werkzeuge ---- */
+    .werkzeuge__inner {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      text-align: center;
+    }
+    .werkzeuge__satz {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: var(--ls-display);
+      text-transform: uppercase;
+      color: #C9A84C;
+      padding: var(--s-6) 0;
+      margin: 0;
+      line-height: 1.1;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .werkzeuge__satz:last-of-type {
+      border-bottom: none;
+    }
+    .werkzeuge__footnote {
+      font-style: italic;
+      font-size: var(--t-small);
+      color: rgba(245,240,232,0.6);
+      margin: var(--s-7) 0 0;
+    }
+
+    /* ---- Sektion 4: Reset ---- */
+    .reset__inner {
+      max-width: 860px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+    .reset__kacheln {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--s-5);
+      margin-bottom: var(--s-7);
+    }
+    .reset__kachel {
+      background: #FFFFFF;
+      border-radius: var(--r-lg);
+      padding: var(--s-6);
+      box-shadow: var(--shadow-1);
+    }
+    .reset__zeit {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      letter-spacing: 0.02em;
+      color: #C9A84C;
+      margin: 0 0 var(--s-3);
+    }
+    .reset__text {
+      font-size: var(--t-body);
+      line-height: 1.7;
+      color: #2C2C2C;
+      margin: 0;
+    }
+    .reset__ziel {
+      border: 2px solid #C9A84C;
+      border-radius: var(--r-lg);
+      padding: var(--s-6) var(--s-7);
+      background: #F5F0E8;
+    }
+    .reset__ziel p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #1A2744;
+      margin: 0;
+    }
+
+    /* ---- Btn volle Breite Mobile ---- */
+    @media (max-width: 480px) {
+      .btn-fullmobile { width: 100%; text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NOTFALL-LEISTE -->
+<div class="emergency-bar" id="emergency-bar" role="complementary" aria-label="Notfallkontakt">
+  <div class="emergency-bar__inner">
+    <span class="emergency-bar__dot" aria-hidden="true"></span>
+    <p>
+      <strong>Telefonseelsorge:</strong>&nbsp;
+      <a href="tel:08001110111">0800 111 0 111</a>
+      <span class="emergency-bar__sep">–</span>
+      kostenlos, 24h
+    </p>
+    <button class="emergency-bar__close" aria-label="Leiste schließen" id="bar-close">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 6 L18 18 M18 6 L6 18"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="site-header is-scrolled" id="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="brand" aria-label="Schild statt Schwert — Startseite">
+      <svg width="34" height="41" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__wm">Schild statt Schwert</span>
+        <span class="brand__sm">Hier findest Du Hilfe</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="sofort.html">Sofortzugang</a></li>
+        <li><a href="index.html#tueren">Verstehen</a></li>
+        <li><a href="index.html#buch">Buch</a></li>
+        <li><a href="index.html#app">App</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="site-nav__toggle" aria-label="Menü öffnen" id="nav-toggle">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 7 H20 M4 12 H20 M4 17 H20"/>
+      </svg>
+    </button>
+  </div>
+  <div class="site-nav__mobile" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="sofort.html">Sofortzugang</a></li>
+      <li><a href="index.html#tueren">Verstehen</a></li>
+      <li><a href="index.html#buch">Buch</a></li>
+      <li><a href="index.html#app">App</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     SEKTION 1 – NOTFALL
+     ============================================================ -->
+<section class="sofort-section sofort-section--dark" id="notfall">
+  <div class="notfall__inner">
+    <p class="notfall__intro">
+      Narzisstische Dynamiken betreffen Frauen und Männer gleichermaßen.
+      Auch wenn Männer seltener über Hilfe sprechen –
+      hier ist der richtige Ort dafür.
+    </p>
+    <h1 class="notfall__headline">
+      Du bist nicht allein.<br>
+      Und Du liegst nicht falsch.
+    </h1>
+
+    <div class="notfall__gruppen">
+      <div>
+        <p class="notfall__gruppe-label">Für alle</p>
+        <span class="notfall__nummer">
+          <a href="tel:08001110111">0800 111 0 111</a>
+          <span class="notfall__nummer-name">Telefonseelsorge</span>
+          <span class="notfall__nummer-meta">kostenlos · 24h · anonym</span>
+        </span>
+        <span class="notfall__nummer">
+          <a href="tel:08001110222">0800 111 0 222</a>
+          <span class="notfall__nummer-name">Telefonseelsorge</span>
+          <span class="notfall__nummer-meta">kostenlos · 24h · anonym</span>
+        </span>
+        <span class="notfall__nummer">
+          <a href="tel:110">110</a>
+          <span class="notfall__nummer-name">Polizei</span>
+        </span>
+        <span class="notfall__nummer">
+          <a href="tel:142">142</a>
+          <span class="notfall__nummer-name">Telefonseelsorge Österreich</span>
+          <span class="notfall__nummer-meta">kostenlos · 24h</span>
+        </span>
+      </div>
+
+      <div>
+        <p class="notfall__gruppe-label">Für Frauen</p>
+        <span class="notfall__nummer">
+          <a href="tel:08000116016">08000 116 016</a>
+          <span class="notfall__nummer-name">Hilfetelefon Gewalt gegen Frauen</span>
+          <span class="notfall__nummer-meta">kostenlos · 24h · mehrsprachig</span>
+        </span>
+
+        <p class="notfall__gruppe-label" style="margin-top: var(--s-6);">Für Männer</p>
+        <span class="notfall__nummer">
+          <a href="tel:08001239900">0800 123 9900</a>
+          <span class="notfall__nummer-name">Männernotruf Deutschland</span>
+          <span class="notfall__nummer-meta">kostenlos · 24h</span>
+        </span>
+        <span class="notfall__nummer">
+          <a href="tel:016032828">01 603 28 28</a>
+          <span class="notfall__nummer-name">Männerberatung Wien</span>
+          <span class="notfall__nummer-meta">kostenlos</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEKTION 2 – SOFORT-PROTOKOLL
+     ============================================================ -->
+<section class="sofort-section sofort-section--light" id="protokoll">
+  <div class="protokoll__inner">
+    <p class="sofort-eyebrow">Sofort-Protokoll</p>
+    <h2 class="sofort-headline">Wenn alles gerade zu viel ist</h2>
+
+    <div class="protokoll__schritte">
+      <div class="protokoll__schritt">
+        <div class="protokoll__schritt-nr">1</div>
+        <p class="protokoll__schritt-titel">Stopp</p>
+        <p class="protokoll__schritt-text">Nichts sagen, nichts tippen, nichts senden. Nur innehalten.</p>
+      </div>
+      <div class="protokoll__schritt">
+        <div class="protokoll__schritt-nr">2</div>
+        <p class="protokoll__schritt-titel">Atmen</p>
+        <p class="protokoll__schritt-text">4 Sekunden einatmen, 6 ausatmen. Zweimal wiederholen.</p>
+      </div>
+      <div class="protokoll__schritt">
+        <div class="protokoll__schritt-nr">3</div>
+        <p class="protokoll__schritt-titel">Ein Satz</p>
+        <p class="protokoll__schritt-text">Kurz, sachlich, ohne Erklärung.</p>
+      </div>
+    </div>
+
+    <div class="protokoll__saetze">
+      <p class="protokoll__satz">„Ich melde mich morgen dazu."</p>
+      <p class="protokoll__satz">„Ich brauche einen Moment."</p>
+      <p class="protokoll__satz">„Ich kläre das schriftlich."</p>
+    </div>
+
+    <hr class="protokoll__trenner">
+
+    <div class="protokoll__absaetze">
+      <p>Eine Runde um den Block. Frische Luft ist kein Rückzug – sie ist Selbstschutz.</p>
+      <p>Ruf jemanden an, dem Du vertraust. Nicht um alles zu erklären – nur um nicht allein damit zu sein.</p>
+      <p>Oder öffne die App Frag Benjamin – sie ist genau für diesen Moment da.</p>
+    </div>
+
+    <a href="#frag-benjamin" class="btn btn-primary btn-md btn-fullmobile" style="margin-top: var(--s-5);">
+      Frag Benjamin öffnen →
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEKTION 3 – WERKZEUGE
+     ============================================================ -->
+<section class="sofort-section sofort-section--dark" id="werkzeuge">
+  <div class="werkzeuge__inner">
+    <p class="sofort-eyebrow">Werkzeuge</p>
+    <h2 class="sofort-headline sofort-headline--light">
+      Sätze, die Du jetzt<br>sagen oder schreiben kannst
+    </h2>
+
+    <p class="werkzeuge__satz">„Das sehe ich anders."</p>
+    <p class="werkzeuge__satz">„Ich kläre das schriftlich."</p>
+    <p class="werkzeuge__satz">„Ich beende das Gespräch hier."</p>
+    <p class="werkzeuge__satz">„Ich melde mich, wenn ich soweit bin."</p>
+    <p class="werkzeuge__satz">„Dazu äußere ich mich nicht."</p>
+
+    <p class="werkzeuge__footnote">Kein Nachsatz. Kein Nachspiel. Kein Beweis.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEKTION 4 – RESET
+     ============================================================ -->
+<section class="sofort-section sofort-section--light" id="reset">
+  <div class="reset__inner">
+    <p class="sofort-eyebrow">Reset</p>
+    <h2 class="sofort-headline">90 Sekunden für Dich</h2>
+
+    <div class="reset__kacheln">
+      <div class="reset__kachel">
+        <p class="reset__zeit">20 Sekunden</p>
+        <p class="reset__text">Zwei tiefe Atemzüge.<br>Vier Sekunden ein, sechs ausatmen.</p>
+      </div>
+      <div class="reset__kachel">
+        <p class="reset__zeit">20 Sekunden</p>
+        <p class="reset__text">Wasser trinken oder<br>Hände kurz kalt abspülen.</p>
+      </div>
+      <div class="reset__kachel">
+        <p class="reset__zeit">50 Sekunden</p>
+        <p class="reset__text">Drei Stichwörter notieren:<br>Was ist passiert?<br>Wie fühlt es sich an?<br>Was ist meins – was nicht?</p>
+      </div>
+    </div>
+
+    <div class="reset__ziel">
+      <p>Den Kopf schließen. Nicht weitergrübeln.<br>Den Rest des Tages Dir zurückgeben.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="kontakt">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <svg width="40" height="48" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="site-footer__wm">Schild statt Schwert</div>
+        <p class="site-footer__mission">
+          Eine Anlaufstelle für Menschen in narzisstischen Beziehungsdynamiken.
+          Unabhängig. Werbefrei. Anonym nutzbar.
+        </p>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Kontakt</p>
+      <a href="mailto:b.lucas.s@web.de" class="site-footer__mail">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="M3 7 L12 13 L21 7"/>
+        </svg>
+        b.lucas.s@web.de
+      </a>
+      <p class="site-footer__author">
+        Benjamin-Lucas Schmidt<br>Hamburg · KDP
+      </p>
+      <a href="https://www.facebook.com/profile.php?id=61557655017234"
+         class="site-footer__fb" target="_blank" rel="noopener noreferrer">
+        Autor auf Facebook →
+      </a>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Rechtliches</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="datenschutz.html#hinweis">Rechtlicher Hinweis</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="site-footer__label">Im Notfall</p>
+      <p>Telefonseelsorge<br><a href="tel:08001110111">0800 111 0 111</a></p>
+      <p>Hilfetelefon Gewalt<br><a href="tel:08000116016">08000 116 016</a></p>
+    </div>
+  </div>
+  <div class="site-footer__bottom container">
+    <p>&copy; 2026 Schild statt Schwert. Diese Seite ersetzt keine Therapie.</p>
+    <p class="site-footer__ds">Kein Tracking · Keine Cookies · Kein Google Analytics</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  document.getElementById('bar-close').addEventListener('click', function () {
+    var bar = document.getElementById('emergency-bar');
+    bar.style.transition = 'opacity 0.2s';
+    bar.style.opacity = '0';
+    setTimeout(function () { bar.remove(); }, 200);
+  });
+  var toggle = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  var ICON_MENU  = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"/></svg>';
+  var ICON_CLOSE = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>';
+  toggle.addEventListener('click', function () {
+    if (!mobileNav.hidden) {
+      mobileNav.hidden = true; toggle.innerHTML = ICON_MENU; toggle.setAttribute('aria-label', 'Menü öffnen');
+    } else {
+      mobileNav.hidden = false; toggle.innerHTML = ICON_CLOSE; toggle.setAttribute('aria-label', 'Menü schließen');
+    }
+  });
+  mobileNav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      mobileNav.hidden = true; toggle.innerHTML = ICON_MENU; toggle.setAttribute('aria-label', 'Menü öffnen');
+    });
+  });
+}());
+</script>
+</body>
+</html>
