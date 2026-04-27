@@ -416,13 +416,17 @@ section.site-footer { padding-block: 0; }
 }
 .phone__row .icon { color: var(--gold-500); flex: 0 0 16px; }
 
+.app-teaser__visual img { width: 280px; max-width: 100%; height: auto; display: block; }
+
 @media (max-width: 820px) {
   .app-teaser__grid { grid-template-columns: 1fr; gap: 40px; }
   .app-teaser__visual { order: -1; }
   .phone { width: 240px; }
+  .app-teaser__visual img { width: 240px; }
 }
 
 /* -------- FOOTER -------- */
+.site-footer {
 .site-footer {
   background: var(--marine-900);
   color: rgba(245,240,232,.75);
