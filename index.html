@@ -738,60 +738,12 @@
 
 }());
 </script>
-Hallo – ich bin Benjamin-Lucas Schmidt, Autor aus Burgwedel.
-Wir arbeiten zusammen an zwei Projekten. Bitte lies alles 
-durch bevor du antwortest.
+Bitte öffne die Datei index.html im Repository BLS0815/frag-benjamin 
+(Branch: main) und füge direkt vor dem schließenden </body>-Tag 
+folgenden HTML-Block ein:
 
-PROJEKT 1 – FRAG BENJAMIN (App)
-Eine KI-gestützte Reflexions-App basierend auf meinem Buch 
-"Narzissmus verstehen – Schild statt Schwert" (3. Auflage).
+<section id="soforthilfe" style="background:#0a0f1e;border:1px solid #c8a84b33;border-radius:12px;padding:2.5rem 2rem;margin:3rem auto;max-width:680px;font-family:Georgia,serif;"><h2 style="color:#c8a84b;font-size:1.1rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .4rem 0;font-weight:normal;">Soforthilfe</h2><p style="color:#a0a8b8;font-size:.9rem;margin:0 0 2rem 0;font-style:italic;">Was brauchst du gerade?</p><div style="border-left:3px solid #cc3333;padding:1rem 1.2rem;margin-bottom:1.2rem;background:#1a0a0a;border-radius:0 8px 8px 0;"><div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem;"><span style="width:10px;height:10px;border-radius:50%;background:#cc3333;display:inline-block;flex-shrink:0;"></span><strong style="color:#e8a0a0;font-size:.95rem;">Akute Gefahr</strong></div><p style="color:#c0b0b0;font-size:.88rem;margin:0 0 .5rem 0;line-height:1.9;">Polizei: <strong style="color:#fff;">110</strong> &nbsp;·&nbsp; Notruf: <strong style="color:#fff;">112</strong></p><p style="color:#c0b0b0;font-size:.88rem;margin:0 0 .5rem 0;line-height:1.9;">Telefonseelsorge: <strong style="color:#fff;">0800 111 0 111</strong> <span style="color:#808898;font-size:.82rem;">(24/7, kostenlos, anonym)</span></p><p style="color:#c0b0b0;font-size:.88rem;margin:0 0 .5rem 0;line-height:1.9;">Frauenhaus: <strong style="color:#fff;">08000 116 016</strong> &nbsp;·&nbsp; Männerhaus: <strong style="color:#fff;">0800 123 9900</strong></p><p style="color:#c0b0b0;font-size:.88rem;margin:0;line-height:1.9;">Kinder &amp; Jugendliche: <strong style="color:#fff;">116 111</strong> <span style="color:#808898;font-size:.82rem;">(Mo–Sa 14–20 Uhr)</span> &nbsp;·&nbsp; Jugendamt: <strong style="color:#fff;">deine Gemeinde</strong></p></div><div style="border-left:3px solid #c8a84b;padding:1rem 1.2rem;margin-bottom:1.2rem;background:#0f1208;border-radius:0 8px 8px 0;"><div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem;"><span style="width:10px;height:10px;border-radius:50%;background:#c8a84b;display:inline-block;flex-shrink:0;"></span><strong style="color:#e8d090;font-size:.95rem;">Erst durchatmen</strong></div><p style="color:#b0a880;font-size:.88rem;margin:0;line-height:1.7;">Raus aus der Situation. Einmal um den Block.<br>Drei tiefe Atemzüge. Dann jemanden anrufen, dem du vertraust.</p></div><div style="border-left:3px solid #4a8a5a;padding:1rem 1.2rem;background:#080f0a;border-radius:0 8px 8px 0;"><div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem;"><span style="width:10px;height:10px;border-radius:50%;background:#4a8a5a;display:inline-block;flex-shrink:0;"></span><strong style="color:#90c8a0;font-size:.95rem;">Konkrete Frage?</strong></div><a href="https://frag-benjamin-production.up.railway.app/" target="_blank" style="display:inline-block;background:transparent;border:1px solid #c8a84b;color:#c8a84b;padding:.65rem 1.4rem;border-radius:6px;text-decoration:none;font-size:.9rem;letter-spacing:.05em;font-family:Georgia,serif;" onmouseover="this.style.background='#c8a84b';this.style.color='#0a0f1e';" onmouseout="this.style.background='transparent';this.style.color='#c8a84b';">Jetzt Benjamin fragen &rarr;</a><p style="color:#606878;font-size:.78rem;margin:1rem 0 0 0;line-height:1.6;font-family:Georgia,serif;">Kein Tracking &nbsp;·&nbsp; Keine Cookies &nbsp;·&nbsp; Kein Google Analytics &nbsp;·&nbsp; Keine Registrierung<br><span style="color:#808898;">Die ersten 5 Fragen sind kostenlos – ohne Anmeldung.</span></p></div></section>
 
-Status:
-- App live: https://frag-benjamin-production.up.railway.app/
-- Repository: BLS0815/frag-benjamin-app (GitHub, public)
-- Hosting: Railway (Service "brillant-Liebe")
-- Lokale Dateien: C:\frag-benjamin
-- Modell: claude-haiku-4-5-20251001
-- System-Prompt: Buchinhalt vollständig integriert
-- Free Tier: 5 kostenlose Fragen, danach Paywall (noch localStorage)
-- Design: dunkel, Goldakzente (#c8a84b), Logo "BL"
-
-Noch offen:
-- Echte Paywall statt localStorage (Stripe)
-- Custom Domain: frag.blschmidtbooks.de
-
-PROJEKT 2 – HOMEPAGE
-Autorenwebsite für blschmidtbooks.de
-
-Status:
-- Homepage live: https://classy-speculoos-9f7e9d.netlify.app/
-- Repository: BLS0815/frag-benjamin (GitHub, public), Branch: main
-- Hosting: Netlify
-- Enthält: index.html, datenschutz.html, impressum.html, sofort.html
-
-Noch offen:
-- Soforthilfe-Section einbauen (HTML-Block liegt bereit)
-- Button zur App einbauen
-- Custom Domain: blschmidtbooks.de
-
-WICHTIGE DETAILS:
-- .env liegt lokal in C:\frag-benjamin – nicht auf GitHub
-- ANTHROPIC_API_KEY ist in Railway als Umgebungsvariable hinterlegt
-- App und Homepage sind sauber in zwei getrennten Repositories
-- Backups beider Projekte auf USB-Stick gesichert
-- Ich arbeite mit Claude Code (Web-Oberfläche im Browser)
-- Ich bevorzuge Schritt-für-Schritt-Anleitung, einen Schritt 
-  nach dem anderen, mit Wartezeit auf meine Bestätigung
-
-MEIN STIL:
-- Wir kommunizieren per "du"
-- Ich bin kein Entwickler – bitte erkläre technische Schritte 
-  einfach und klar
-- Prompts für Claude Code bitte fertig formuliert liefern, 
-  damit ich sie nur noch einfügen muss
-
-Wo stehen wir gerade:
-[HIER EINFÜGEN was als nächstes ansteht – 
-z.B. "Soforthilfe-Section in Homepage einbauen" 
-oder "Custom Domains verbinden"]</body>
+Danach committen mit der Message "Soforthilfe-Section eingefügt" 
+und pushen damit Netlify automatisch deployed.</body>
 </html>
