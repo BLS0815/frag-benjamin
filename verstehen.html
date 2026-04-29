@@ -1,69 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verstehen & Einordnen | Benjamin-Lucas Schmidt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verstehen &amp; Einordnen — Schild statt Schwert</title>
   <meta name="description" content="Narzissmus, NPS und ihre Dynamiken in Beziehungen verstehen. Klarheit gewinnen, ohne sich selbst zu verlieren.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Verstehen & Einordnen — Schild statt Schwert">
+  <meta property="og:description" content="Narzissmus, NPS und ihre Dynamiken in Beziehungen verstehen. Klarheit gewinnen, ohne sich selbst zu verlieren.">
+  <link rel="stylesheet" href="project/colors_and_type.css">
+  <link rel="stylesheet" href="project/site.css">
+  <link rel="icon" type="image/svg+xml" href="project/assets/shield-mark.svg">
+  <style>
+    /* ---- Verstehen-Seite: minimale, seiten-spezifische Anpassungen ---- */
+    .verstehen-page__intro p {
+      font-size: var(--t-lead);
+      line-height: 1.55;
+      color: var(--ink-800);
+      margin: 0 0 var(--s-5);
+    }
+    .verstehen-page__block {
+      margin-top: var(--s-8);
+    }
+    .verstehen-page__block h2 {
+      font-size: clamp(1.625rem, 2.6vw, 2.25rem);
+      color: var(--marine-700);
+      margin: 0 0 var(--s-4);
+    }
+    .verstehen-page__block p {
+      font-size: var(--t-body);
+      line-height: 1.7;
+      color: var(--ink-800);
+      margin: 0 0 var(--s-4);
+    }
+    .verstehen-page__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: var(--s-9);
+      padding-top: var(--s-6);
+      border-top: 1px solid var(--cream-300);
+    }
+
+    /* Footer Facebook-Link (Style aus index.html gespiegelt — gleiche Optik) */
+    .site-footer__fb {
+      display: inline-block;
+      margin-top: var(--s-2);
+      font-size: var(--t-xs);
+      color: var(--fg-on-dark-muted);
+      text-decoration: none;
+    }
+    .site-footer__fb:hover { color: var(--gold-400); text-decoration: none; }
+  </style>
 </head>
 <body>
 
-  <main class="page-verstehen">
-    <article class="container verstehen">
+<!-- ============================================================
+     NOTFALL-LEISTE
+     ============================================================ -->
+<div class="emergency-bar" id="emergency-bar" role="complementary" aria-label="Notfallkontakt">
+  <div class="emergency-bar__inner">
+    <span class="emergency-bar__dot" aria-hidden="true"></span>
+    <p>
+      <strong>Telefonseelsorge:</strong>&nbsp;
+      <a href="tel:08001110111">0800 111 0 111</a>
+      <span class="emergency-bar__sep">–</span>
+      kostenlos, 24h
+    </p>
+    <button class="emergency-bar__close" aria-label="Leiste schließen" id="bar-close">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 6 L18 18 M18 6 L6 18"/>
+      </svg>
+    </button>
+  </div>
+</div>
 
-      <header class="verstehen__header">
-        <p class="verstehen__kicker">— Verstehen & Einordnen</p>
-        <h1 class="verstehen__title">Worum es hier geht – und warum</h1>
-      </header>
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a href="index.html#top" class="brand" aria-label="Schild statt Schwert — Startseite">
+      <svg width="34" height="41" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__wm">Schild statt Schwert</span>
+        <span class="brand__sm">Hier findest Du Hilfe</span>
+      </span>
+    </a>
 
-      <section class="verstehen__intro">
-        <p>Wenn du dich immer häufiger erklärst, obwohl du nichts falsch gemacht hast – dann stimmt etwas nicht. Wenn du beginnst, deiner eigenen Wahrnehmung zu misstrauen, obwohl du dir früher sicher warst – dann lohnt es sich, genauer hinzusehen.</p>
-        <p>Diese Seite, das Buch <em>Narzissmus verstehen – Schild statt Schwert</em> und die App <em>Frag Benjamin</em> haben einen klaren Fokus: die <strong>narzisstische Persönlichkeitsstörung (NPS)</strong> – und die Dynamiken, die sie in Beziehungen auslösen kann.</p>
-      </section>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html#soforthilfe">Sofortzugang</a></li>
+        <li><a href="verstehen.html" class="is-current-page" aria-current="page">Verstehen</a></li>
+        <li><a href="index.html#buch">Buch</a></li>
+        <li><a href="index.html#app">App</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
 
-      <section class="verstehen__block">
-        <h2>Was hier nicht gemeint ist</h2>
-        <p>Ein gewisses Maß an narzisstischen Anteilen gehört zum Menschen dazu. Selbstbehauptung, Zielstrebigkeit, ein stabiles Selbstbild – all das ist normal und wichtig.</p>
-        <p>Darum geht es hier nicht.</p>
-      </section>
+    <button class="site-nav__toggle" aria-label="Menü öffnen" id="nav-toggle">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 7 H20 M4 12 H20 M4 17 H20"/>
+      </svg>
+    </button>
+  </div>
 
-      <section class="verstehen__block">
-        <h2>Worum es wirklich geht</h2>
-        <p>Es geht um die andere Seite. Um Beziehungen, in denen sich etwas schleichend verändert.</p>
-        <p>NPS ist kein „stärker ausgeprägter Charakterzug", sondern ein tief verankertes Muster: Grandiosität, ein starkes Bedürfnis nach Bewunderung, eingeschränkte Empathie und wiederkehrende Schwierigkeiten in nahen Beziehungen.</p>
-        <p>In solchen Konstellationen entstehen oft hochbelastende, nicht selten toxische Dynamiken. Sie zermürben – leise, aber konstant. Und sie führen bei vielen Betroffenen dazu, dass sie sich selbst immer weiter zurücknehmen.</p>
-      </section>
+  <div class="site-nav__mobile" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="index.html#soforthilfe">Sofortzugang</a></li>
+      <li><a href="verstehen.html" class="is-current-page" aria-current="page">Verstehen</a></li>
+      <li><a href="index.html#buch">Buch</a></li>
+      <li><a href="index.html#app">App</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
 
-      <section class="verstehen__block">
-        <h2>Warum es so schwer zu erkennen ist</h2>
-        <p>Diese Dynamiken beginnen selten laut. Sie entwickeln sich Schritt für Schritt.</p>
-        <p>Vielleicht kennst du das: Du erklärst dich immer häufiger. Du hinterfragst deine Reaktionen. Du hast das Gefühl, „zu empfindlich" zu sein.</p>
-        <p>Und irgendwann verschiebt sich etwas Entscheidendes: Der Zweifel richtet sich nicht mehr nach außen – sondern gegen dich selbst.</p>
-        <p>Genau hier verlieren viele die Orientierung.</p>
-      </section>
+<main>
 
-      <section class="verstehen__block">
-        <h2>Was dich hier erwartet</h2>
-        <p>Dieses Projekt besteht aus drei Bausteinen, die einzeln funktionieren – und zusammen ein System bilden:</p>
-        <p>Das <strong>Buch</strong> vermittelt die Grundlagen: verstehen, erkennen, schützen. Die <strong>Homepage</strong> gibt dir schnelle Orientierung, wenn du sie brauchst. Die <strong>App</strong> begleitet dich im Moment selbst – wenn eine Situation gerade passiert.</p>
-        <p>Ob nachts, vor einem Gespräch oder danach: Du hast jederzeit Zugriff auf Klarheit, Struktur und konkrete Handlungsmöglichkeiten.</p>
-      </section>
+<!-- ============================================================
+     VERSTEHEN & EINORDNEN
+     ============================================================ -->
+<section>
+  <div class="container-narrow">
+    <p class="eyebrow eyebrow--gold">Verstehen &amp; Einordnen</p>
+    <h1 class="section-title">Worum es hier geht – und warum</h1>
 
-      <section class="verstehen__block">
-        <h2>Worum es im Kern geht</h2>
-        <p>Es geht nicht darum, vorschnell zu diagnostizieren. Es geht darum, wieder klar sehen zu können.</p>
-        <p>Zu verstehen, was passiert. Und zu erkennen, welche Möglichkeiten du hast – ohne dich selbst dabei zu verlieren.</p>
-      </section>
+    <div class="verstehen-page__intro">
+      <p>Wenn du dich immer häufiger erklärst, obwohl du nichts falsch gemacht hast – dann stimmt etwas nicht. Wenn du beginnst, deiner eigenen Wahrnehmung zu misstrauen, obwohl du dir früher sicher warst – dann lohnt es sich, genauer hinzusehen.</p>
+      <p>Diese Seite, das Buch <em>Narzissmus verstehen – Schild statt Schwert</em> und die App <em>Frag Benjamin</em> haben einen klaren Fokus: die <strong>narzisstische Persönlichkeitsstörung (NPS)</strong> – und die Dynamiken, die sie in Beziehungen auslösen kann.</p>
+    </div>
 
-      <nav class="verstehen__actions" aria-label="Weiterführende Bereiche">
-        <a href="index.html#buch" class="btn btn--primary">Zum Buch →</a>
-        <a href="https://frag-benjamin-production.up.railway.app/" class="btn btn--primary" target="_blank" rel="noopener">Zur App →</a>
-        <a href="index.html" class="btn btn--ghost">← Zurück zur Hauptseite</a>
-      </nav>
+    <div class="verstehen-page__block">
+      <h2>Was hier nicht gemeint ist</h2>
+      <p>Ein gewisses Maß an narzisstischen Anteilen gehört zum Menschen dazu. Selbstbehauptung, Zielstrebigkeit, ein stabiles Selbstbild – all das ist normal und wichtig.</p>
+      <p>Darum geht es hier nicht.</p>
+    </div>
 
-    </article>
-  </main>
+    <div class="verstehen-page__block">
+      <h2>Worum es wirklich geht</h2>
+      <p>Es geht um die andere Seite. Um Beziehungen, in denen sich etwas schleichend verändert.</p>
+      <p>NPS ist kein „stärker ausgeprägter Charakterzug”, sondern ein tief verankertes Muster: Grandiosität, ein starkes Bedürfnis nach Bewunderung, eingeschränkte Empathie und wiederkehrende Schwierigkeiten in nahen Beziehungen.</p>
+      <p>In solchen Konstellationen entstehen oft hochbelastende, nicht selten toxische Dynamiken. Sie zermürben – leise, aber konstant. Und sie führen bei vielen Betroffenen dazu, dass sie sich selbst immer weiter zurücknehmen.</p>
+    </div>
+
+    <div class="verstehen-page__block">
+      <h2>Warum es so schwer zu erkennen ist</h2>
+      <p>Diese Dynamiken beginnen selten laut. Sie entwickeln sich Schritt für Schritt.</p>
+      <p>Vielleicht kennst du das: Du erklärst dich immer häufiger. Du hinterfragst deine Reaktionen. Du hast das Gefühl, „zu empfindlich” zu sein.</p>
+      <p>Und irgendwann verschiebt sich etwas Entscheidendes: Der Zweifel richtet sich nicht mehr nach außen – sondern gegen dich selbst.</p>
+      <p>Genau hier verlieren viele die Orientierung.</p>
+    </div>
+
+    <div class="verstehen-page__block">
+      <h2>Was dich hier erwartet</h2>
+      <p>Dieses Projekt besteht aus drei Bausteinen, die einzeln funktionieren – und zusammen ein System bilden:</p>
+      <p>Das <strong>Buch</strong> vermittelt die Grundlagen: verstehen, erkennen, schützen. Die <strong>Homepage</strong> gibt dir schnelle Orientierung, wenn du sie brauchst. Die <strong>App</strong> begleitet dich im Moment selbst – wenn eine Situation gerade passiert.</p>
+      <p>Ob nachts, vor einem Gespräch oder danach: Du hast jederzeit Zugriff auf Klarheit, Struktur und konkrete Handlungsmöglichkeiten.</p>
+    </div>
+
+    <div class="verstehen-page__block">
+      <h2>Worum es im Kern geht</h2>
+      <p>Es geht nicht darum, vorschnell zu diagnostizieren. Es geht darum, wieder klar sehen zu können.</p>
+      <p>Zu verstehen, was passiert. Und zu erkennen, welche Möglichkeiten du hast – ohne dich selbst dabei zu verlieren.</p>
+    </div>
+
+    <nav class="verstehen-page__actions" aria-label="Weiterführende Bereiche">
+      <a href="index.html#buch" class="btn btn-primary btn-md">Zum Buch →</a>
+      <a href="https://frag-benjamin-production.up.railway.app/" class="btn btn-primary btn-md" target="_blank" rel="noopener noreferrer">Zur App →</a>
+      <a href="index.html" class="btn btn-ghost btn-md">← Zurück zur Hauptseite</a>
+    </nav>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" id="kontakt">
+  <div class="container site-footer__grid">
+    <a class="site-footer__brand" href="index.html#top" aria-label="Schild statt Schwert — Zur Startseite">
+      <svg width="40" height="48" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 5 L90 15 L90 55 C90 82 72 105 50 115 C28 105 10 82 10 55 L10 15 Z" fill="var(--gold-500)"/>
+        <g fill="var(--marine-700)">
+          <path d="M49 25 L51 25 L51 72 L49 72 Z"/>
+          <path d="M50 20 L52 25 L48 25 Z"/>
+          <rect x="38" y="72" width="24" height="5" rx="1"/>
+          <rect x="48.5" y="77" width="3" height="14"/>
+          <circle cx="50" cy="94" r="3.5"/>
+        </g>
+      </svg>
+      <div>
+        <div class="site-footer__wm">Schild statt Schwert</div>
+        <p class="site-footer__mission">
+          Eine Anlaufstelle für Menschen in narzisstischen Beziehungsdynamiken.
+          Unabhängig. Werbefrei. Anonym nutzbar.
+        </p>
+      </div>
+    </a>
+
+    <div class="site-footer__col">
+      <p class="site-footer__label">Kontakt</p>
+      <a href="mailto:b.lucas.s@web.de" class="site-footer__mail">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+          <path d="M3 7 L12 13 L21 7"/>
+        </svg>
+        b.lucas.s@web.de
+      </a>
+      <p class="site-footer__author">
+        Benjamin-Lucas Schmidt<br>Hamburg · KDP
+      </p>
+      <a href="https://www.facebook.com/profile.php?id=61557655017234"
+         class="site-footer__fb" target="_blank" rel="noopener noreferrer">
+        Autor auf Facebook →
+      </a>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__label">Rechtliches</p>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="datenschutz.html#hinweis">Rechtlicher Hinweis</a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__label">Im Notfall</p>
+      <p>Telefonseelsorge<br><a href="tel:08001110111">0800 111 0 111</a></p>
+      <p>Hilfetelefon Gewalt<br><a href="tel:08000116016">08000 116 016</a></p>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom container">
+    <p>&copy; 2026 Schild statt Schwert. Diese Seite ersetzt keine Therapie.</p>
+    <p class="site-footer__ds">Kein Tracking · Keine Cookies · Kein Google Analytics</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* --- Notfall-Leiste schließen --- */
+  var barClose = document.getElementById('bar-close');
+  if (barClose) {
+    barClose.addEventListener('click', function () {
+      var bar = document.getElementById('emergency-bar');
+      bar.style.transition = 'opacity 0.2s';
+      bar.style.opacity = '0';
+      setTimeout(function () { bar.remove(); }, 200);
+    });
+  }
+
+  /* --- Header-Schatten beim Scrollen --- */
+  var header = document.getElementById('site-header');
+  if (header) {
+    window.addEventListener('scroll', function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
+
+  /* --- Mobile Navigation --- */
+  var toggle    = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+
+  var ICON_MENU  = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7 H20 M4 12 H20 M4 17 H20"/></svg>';
+  var ICON_CLOSE = '<svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>';
+
+  function closeMobileNav() {
+    mobileNav.hidden = true;
+    toggle.innerHTML = ICON_MENU;
+    toggle.setAttribute('aria-label', 'Menü öffnen');
+  }
+
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', function () {
+      if (!mobileNav.hidden) {
+        closeMobileNav();
+      } else {
+        mobileNav.hidden = false;
+        toggle.innerHTML = ICON_CLOSE;
+        toggle.setAttribute('aria-label', 'Menü schließen');
+      }
+    });
+
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMobileNav);
+    });
+  }
+
+}());
+</script>
 
 </body>
 </html>

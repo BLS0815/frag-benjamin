@@ -160,6 +160,16 @@ section.site-footer { padding-block: 0; }
   content: ""; display: block; height: 2px; background: var(--gold-500);
   margin-top: 6px; border-radius: 1px;
 }
+/* Static "current page" marker — set in HTML on subpages (e.g. verstehen.html) */
+.site-nav a.is-current-page,
+.site-nav__mobile a.is-current-page {
+  color: var(--gold-700);
+  font-weight: 600;
+}
+.site-nav a.is-current-page::after {
+  content: ""; display: block; height: 2px; background: var(--gold-500);
+  margin-top: 6px; border-radius: 1px;
+}
 
 .site-nav__toggle { display: none; background: transparent; border: none; cursor: pointer; color: var(--marine-700); padding: 8px; border-radius: 4px; }
 .site-nav__mobile { display: none; border-top: 1px solid var(--cream-300); padding: 12px var(--gutter); }
@@ -439,15 +449,15 @@ section.site-footer { padding-block: 0; }
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(245,240,232,.08);
 }
-.site-footer__brand { display: flex; gap: 14px; align-items: flex-start; }
+.site-footer__brand { 
+  display: flex; gap: 14px; align-items: flex-start; }
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--dur-base) var(--ease-standard);
+}
+.site-footer__brand:hover { color: inherit; opacity: 0.85; }
 .site-footer__wm {
   font-family: var(--font-display); font-size: 22px;
-  letter-spacing: .02em; text-transform: uppercase;
-  color: var(--cream-100); margin-bottom: 10px;
-}
-.site-footer__mission { font-size: 14px; line-height: 1.55; max-width: 36ch; color: rgba(245,240,232,.55); margin: 0; }
-.site-footer__label {
-  font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
   color: var(--gold-500); margin: 0 0 14px;
 }
 .site-footer__mail { display: inline-flex; align-items: center; gap: 8px; color: var(--cream-100); text-decoration: none; font-weight: 500; font-size: 15px; margin-bottom: 12px; }
