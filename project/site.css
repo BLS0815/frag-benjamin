@@ -170,6 +170,34 @@ section.site-footer { padding-block: 0; }
   content: ""; display: block; height: 2px; background: var(--gold-500);
   margin-top: 6px; border-radius: 1px;
 }
+/* -------- DISCLAIMER NOTE -------- */
+/* Used near CTAs that lead to external content (e.g. "Zur App →") */
+.disclaimer-note {
+  font-size: var(--t-small);
+  font-style: italic;
+  color: var(--ink-500);
+  line-height: 1.5;
+  margin: var(--s-5) 0 0;
+  max-width: 56ch;
+}
+.disclaimer-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.disclaimer-note a:hover { color: var(--gold-700); }
+
+/* -------- APP-TEASER USP (Pull-Quote-Stil vor "Zur App →") -------- */
+.app-teaser__usp {
+  font-size: var(--t-body);
+  font-style: italic;
+  color: var(--ink-800);
+  line-height: 1.6;
+  border-left: 3px solid var(--gold-500);
+  padding-left: var(--s-5);
+  margin: var(--s-6) 0;
+  max-width: 48ch;
+}
 
 .site-nav__toggle { display: none; background: transparent; border: none; cursor: pointer; color: var(--marine-700); padding: 8px; border-radius: 4px; }
 .site-nav__mobile { display: none; border-top: 1px solid var(--cream-300); padding: 12px var(--gutter); }
