@@ -1,0 +1,91 @@
+# ============================================================
+# schildstattschwert.de — IONOS Webhosting Plus
+# ============================================================
+
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# --- 1) HTTP → HTTPS erzwingen --------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- 2) www → non-www ----------------------------------------
+RewriteCond %{HTTP_HOST} ^www\.schildstattschwert\.de$ [NC]
+RewriteRule ^ https://schildstattschwert.de%{REQUEST_URI} [L,R=301]
+
+# --- 3) Saubere URLs (DEAKTIVIERT — später aktivieren) -------
+# Zum Aktivieren: die folgenden 6 Zeilen ent-kommentieren
+#
+# RewriteCond %{THE_REQUEST} \s/+([^\s?]+)\.html[\s?] [NC]
+# RewriteRule ^ /%1 [L,R=301]
+#
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME}.html -f
+# RewriteRule ^([^.]+)$ $1.html [L]
+
+# --- 4) Caching für statische Assets --------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                        "access plus 1 hour"
+  ExpiresByType text/html               "access plus 1 hour"
+  ExpiresByType text/css                "access plus 7 days"
+  ExpiresByType application/javascript  "access plus 7 days"
+  ExpiresByType image/png               "access plus 30 days"
+  ExpiresByType image/jpeg              "access plus 30 days"
+  ExpiresByType image/svg+xml           "access plus 30 days"
+  ExpiresByType image/x-icon            "access plus 30 days"
+  ExpiresByType application/pdf         "access plus 30 days"
+  ExpiresByType font/woff2              "access plus 365 days"
+  ExpiresByType application/font-woff2  "access plus 365 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|svg|pdf|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# --- 5) Kompression -------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff2
+</IfModule>
+
+# --- 6) Sicherheits-Header ------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# --- 7) Sensible Endungen blocken (Fallback) ------------------
+<FilesMatch "\.(docx|doc|md|jsx|napkin|gitignore|env|bak|log)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# --- 8) Custom 404 (deaktiviert, bis 404.html existiert) ------
+# ErrorDocument 404 /404.html
+
+# --- 9) MIME-Type-Korrektur -----------------------------------
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+</IfModule>
